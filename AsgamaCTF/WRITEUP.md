@@ -374,7 +374,7 @@ gdb-peda$ pattern offset 0x41474141
 1095188801 found at offset: 52
 ```
 
-Terlihat pada offset 52 fungsi ```check``` ter-overwrite dan kita bisa merubah address ke address tujuan kita yaitu fungsi ```flag``` yang akan mencetak flag yang kita cari.
+Terlihat pada offset 52 ```eip``` ter-overwrite dan kita bisa merubah address ke address tujuan kita yaitu fungsi ```flag``` yang akan mencetak flag yang kita cari.
 
 Kita cari address ```flag``` dengan ```objdump```
 
