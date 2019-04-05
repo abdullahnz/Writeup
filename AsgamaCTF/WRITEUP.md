@@ -366,7 +366,7 @@ Writing pattern of 300 chars to filename "exp"
 gdb-peda$ b *0x08049290
 Breakpoint 2 at 0x8049290
 gdb-peda$ r < exp 
-Starting program: /home/xnor/AsgamaCTF/WriteUp/buffow < exp
+Starting program: /home/abdullahnz/AsgamaCTF/WriteUp/buffow < exp
 ...
 Stopped reason: SIGSEGV
 0x41474141 in ?? ()
