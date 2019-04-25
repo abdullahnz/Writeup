@@ -2,7 +2,7 @@
 
 ## Buffer1 [50 pts]
 
-Diberikan file ELF 32-bit not stripped.
+Diberikan file ELF 32-bit not stripped dan service ```nc asgama.web.id 40203```.
 
 ```
 $ file buf1 
@@ -63,7 +63,7 @@ Flag : ```GamaCTF{BufF3rR__0vErf10W__EZ}```
 
 ## Buffer2 [75 pts]
 
-Diberikan File ELF 32-bit not stripped.
+Diberikan File ELF 32-bit not stripped dan service ```nc asgama.web.id 40202```
 
 Command : ```file buf2```
 ```
@@ -161,7 +161,7 @@ Note : Untuk melihat fungsi bisa dengan GDB dengan command ```info functions``` 
 
 # EZ 1 [100 pts]
 
-Diberikan file ELF 32-bit not stripped bernama ```hoho```
+Diberikan file ELF 32-bit not stripped bernama ```hoho``` dan service ```nc asgama.web.id 40210```
 ```
 $ file hoho
 hoho: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=91cf29963d62f9f85d561bb273ed4d7a54b5037b, not stripped
@@ -229,7 +229,7 @@ Flag : ```GamaCTF{0v3RWrite_vAriaBl3_D0eL0e_G4n}```
 
 # EZ 2 [150 pts]
 
-Diberikan file ELF-32 bit not stripped bernama ```hoho```
+Diberikan file ELF-32 bit not stripped bernama ```hoho``` dan service  ```nc asgama.web.id 40209```
 ```
 $ file hehe
 hehe: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=91febecb162e2e4c737a82cd97f7f38040c28e55, not stripped
@@ -351,7 +351,7 @@ Flag: ```GamaCTF{R0P_r0P_FTW}```
 
 # Buffow [200 pts]
 
-Diberikan file ELF 32-bit not stripped yang hanya meminta inputan tapi tidak mencetak output.
+Diberikan file ELF 32-bit not stripped yang hanya meminta inputan tapi tidak mencetak output dan service ```nc asgama.web.id 40211```
 ```
 $ file buffow
 buffow: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=10ddb3cec335906e1fc641fce780bffc73fcb09a, not stripped
