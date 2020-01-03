@@ -12,7 +12,7 @@ buf1: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically link
 Langsung saja buka di GDB dan liat hasil dissasemble fungsi ```main```.
 
 Fungsi ```main```:
-```
+```bash
 gdb-peda$ pdisas main
 Dump of assembler code for function main:
    0x08048537 <+0>:  lea    ecx,[esp+0x4]
@@ -311,7 +311,7 @@ Solusi: ```Sampah + return address + argumen yang harus dipenuhi di address tuju
 Biar rapi kita bikin solvernya pake pwntools ok?
 
 ```solver.py```
-```
+```python
 from pwn import *
 
 r = remote("asgama.web.id", 40209)
