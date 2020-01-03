@@ -128,7 +128,7 @@ Address debug : ```0x0804851c``` tapi harus dijadiin little endian dulu. Jadi : 
 Mantap, langsung aja buat solver nya. (Pake pwntools biar rapi wkwk)
 
 ```solver.py```
-```
+```python
 from pwn import *
 
 #r = process("./buf2")
