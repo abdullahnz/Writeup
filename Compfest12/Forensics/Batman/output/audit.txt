@@ -1,0 +1,24 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Tue Aug 18 06:28:08 2020
+Invocation: foremost batman2.png 
+Output directory: /home/abdullahnz/CTF/COMPFEST/hc/foren/batman/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: batman2.png
+Start: Tue Aug 18 06:28:08 2020
+Length: 192 KB (197538 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.png 	     187 KB 	          0 	  (513 x 368)
+1:	00000375.png 	       5 KB 	     192322 	  (827 x 331)
+Finish: Tue Aug 18 06:28:08 2020
+
+2 FILES EXTRACTED
+	
+png:= 2
+------------------------------------------------------------------
+
+Foremost finished at Tue Aug 18 06:28:08 2020
