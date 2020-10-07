@@ -11,4 +11,5 @@ Yang terakhir ini *secara umum* belum begitu paham sih, sampai sekarang (saat tu
 
 *Note: challenge ini tidak bisa diselesaikan menggunakan one_gadget*
 
-**Lah, kok malah bahas hacktoday**
+**Lah, kok malah bahas soal hacktoday sih.**
+¯\ (ツ) /¯
