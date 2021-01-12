@@ -1,6 +1,6 @@
 # Learning, about ret2libc and leaking memory address from format string bug.
 
-Wkwkwk, ini ditulis lagi karena setelah menang CTF yang diadakan Telkom yaitu **Icyption**. [Writeup](https://abdullahnz.github.io/writeup/pwn/2020/07/15/write-up-binex-asgama-ctf.html)
+Wkwkwk, ini ditulis lagi karena setelah menang CTF yang diadakan Telkom yaitu **Icyption**. [Writeup](https://abdullahnz.github.io/posts/icyption/final/)
 
 Gak tau, yang pertamanya gak terlalu mentingin CTF, entah kenapa jadi semangat untuk mencoba soal-soal yang lebih sulit lagi. *plus*, setelah writeup hacktoday 2020 ada yang nge-*share*. Tambah semangat lagi belajar PWN.
 
