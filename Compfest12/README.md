@@ -10,4 +10,4 @@ Mulai setelah sholat ashar, saya mulai nge-solve soal-soal karena gak *kemrungsu
 
 Jujur gan, saat mau mulai itu tangan gemeteran, gak tau kenapa. Mungkin karena lagi *seneng-seneng*-nya ikut lomba CTF.
 
-NB: File diatas adalah challanges pada saat hacker class.
+NB: File diatas adalah file challenges pada saat hacker class.
