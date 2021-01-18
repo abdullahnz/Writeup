@@ -9,3 +9,5 @@ Soal-soalnya berkualitas menurut saya *–nggaya, koyo ws pro wae ws nilai-nilai
 Mulai setelah sholat ashar, saya mulai nge-solve soal-soal karena gak *kemrungsung*. Wkwk ini dari rank 35an, jadi 10 (sampai habis maghrib). Akhirnya setelah selesai kompetisi jadi rank 14 (Team: Hmm) *sad :'(*
 
 Jujur gan, saat mau mulai itu tangan gemeteran, gak tau kenapa. Mungkin karena lagi *seneng-seneng*-nya ikut lomba CTF.
+
+NB: File diatas adalah challanges pada saat hacker class.
