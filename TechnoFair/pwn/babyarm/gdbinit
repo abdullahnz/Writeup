@@ -1,0 +1,5 @@
+source ~/pwndbg-src/gdbinit.py
+set architecture arm
+target remote localhost:1111
+file ./chall
+b *0x00010478
