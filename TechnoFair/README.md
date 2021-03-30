@@ -9,4 +9,4 @@ Playing as `akhir-akhir ctf pas smk`. Finished at 1st place before freeze. After
 ![scoreboard](scoreboard.png)
 
 
-Semua problems yang aku selesaikan.
+Semua problems yang aku selesaikan, disini.
