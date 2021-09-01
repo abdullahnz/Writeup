@@ -1,0 +1,86 @@
+function <main> (14 instructions at 0x55d22a3426e0)
+arguments 0, defaults 0, upvalues 0
+    0000 OP_CLOSURE 0 (<func jambo:1>)
+    0003 OP_DEFINE_GLOBAL 1 ("jambo")
+    0006 OP_GET_GLOBAL 2 ("print")
+    0009 OP_GET_GLOBAL 1 ("jambo")
+    0012 OP_GET_CONST 3 (13)
+    0015 OP_CALL_1
+    0016 OP_GET_GLOBAL 1 ("jambo")
+    0019 OP_GET_CONST 4 (37)
+    0022 OP_CALL_1
+    0023 OP_ADD
+    0024 OP_CALL_1
+    0025 OP_POP
+    0026 OP_NULL
+    0027 OP_RETURN
+
+main:
+    print jambo(13) + jambo(37)
+
+jambo:
+    - arg
+    if arg <= 1:
+        return arg
+
+    b = 0
+    c = 0
+
+    if c < arg:
+        b += jambo(c) * jambo(arg - c - 1) 
+        c += 1
+    else:
+        return b
+    
+
+function jambo (39 instructions at 0x55d22a3419e0)
+arguments 1, defaults 0, upvalues 0
+    0000 OP_GET_LOCAL 1 (arg)
+    0002 OP_GET_CONST 0 (1)
+    0005 OP_LE
+    0006 OP_JUMPF 4 (to 13)
+    0009 OP_GET_CONST 0 (1)
+    0012 OP_RETURN
+
+    0013 OP_GET_CONST 1 (0)
+    0016 OP_GET_CONST 1 (0)
+    0019 OP_JUMP 9 (to 31)
+
+    c += 1
+    0022 OP_GET_LOCAL 3 (c)
+    0024 OP_GET_CONST 0 (1)
+    0027 OP_ADD
+    0028 OP_SET_LOCAL 3 (c)
+    0030 OP_POP
+    
+    0031 OP_GET_LOCAL 3 (c)
+    0033 OP_GET_LOCAL 1 (arg)
+    0035 OP_LT
+    0036 OP_JUMPF 29 (to 68)
+
+    0039 OP_GET_LOCAL 2 (b)
+    0041 OP_GET_GLOBAL 2 ("jambo")
+    0044 OP_GET_LOCAL 3 (c)
+    0046 OP_CALL_1
+
+    0047 OP_GET_GLOBAL 2 ("jambo")
+    0050 OP_GET_LOCAL 1 (arg)
+    0052 OP_GET_LOCAL 3 (c)
+    0054 OP_SUB
+    0055 OP_GET_CONST 0 (1)
+    0058 OP_SUB
+    0059 OP_CALL_1
+
+    b += jambo(c) * jambo(arg - c - 1) 
+
+    0060 OP_MUL
+    0061 OP_ADD
+    0062 OP_SET_LOCAL 2 (b)
+    0064 OP_POP
+    0065 OP_JUMP -46 (to 22)
+    
+    0068 OP_POP
+    0069 OP_GET_LOCAL 2 (b)
+    0071 OP_RETURN
+    0072 OP_NULL
+    0073 OP_RETURN
