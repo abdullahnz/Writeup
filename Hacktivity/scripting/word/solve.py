@@ -1,22 +1,9 @@
+#!/usr/bin/python3
 
-maps = [
-    'DYOUPFKUIIBJCFGS',
-    'BCVXTEWLQDVRQRGR',
-    'MYLMKXHOZYKLDHPG',
-    'ENMESBTVPRPASZYA',
-    'UYEUMOACOXAEVNRD',
-    'SWEATYLTGPVOHPHA',
-    'ZTSHTXZLHMJATRRF',
-    'BLKSCQKAIRVYYAUY',
-    'QHXFZKBRQLOXNSWS',
-    'TASZMSFATSNBPWHX',
-    'EVEWLZLVNUATEUGW',
-    'SRZBSIKAWDPXZSLY',
-    'JGSOPZGVVGYDJZAL',
-    'PAPNSOVNLELGXFHN',
-    'HGBZQLNCOBXAXJGE',
-    'OLPHHHJVGIHLUCVB',
-]
+from pwn import *
+
+HOST = 'challenge.ctf.games'
+PORT = 30433
 
 STEP = [
     (-1,  0), (1,  0),
@@ -78,11 +65,6 @@ def get_maps():
     r.recvlines(2)
     return maps
 
-from pwn import *
-
-HOST = 'challenge.ctf.games'
-PORT = 30433
-
 if __name__ == '__main__':
     r = remote(HOST, PORT)
     
@@ -103,51 +85,29 @@ if __name__ == '__main__':
 
     r.interactive()
 
-# maps = [
-#     'SXJRGOMVROWAKLRF',
-#     'VNCBVQNNPJPVCTRC',
-#     'EBCFCOEZFRSSOKCN',
-#     'YOPTJFEAZNGUPKLX',
-#     'GOROXMORDEREDQAK',
-#     'GKICQOLIWSCJKMRK',
-#     'XMFCSVBNJRSYOXID',
-#     'QOPWQSJGCFVUNENJ',
-#     'IBRETINUEWPNHWEN',
-#     'SIBWXQOAJZNERCTS',
-#     'JLUHOEZQAYAHMUTQ',
-#     'EEJWCMAAXPAWHLIZ',
-#     'OSLGPHEYSDKWKPSK',
-#     'JBMQAUMNTXEVKUTN',
-#     'ZNHCDARDDOFEMCSJ',
-#     'JVZMMLWLBWLXPYCY',
-# ]
+'''
+maps = [
+    'SXJRGOMVROWAKLRF',
+    'VNCBVQNNPJPVCTRC',
+    'EBCFCOEZFRSSOKCN',
+    'YOPTJFEAZNGUPKLX',
+    'GOROXMORDEREDQAK',
+    'GKICQOLIWSCJKMRK',
+    'XMFCSVBNJRSYOXID',
+    'QOPWQSJGCFVUNENJ',
+    'IBRETINUEWPNHWEN',
+    'SIBWXQOAJZNERCTS',
+    'JLUHOEZQAYAHMUTQ',
+    'EEJWCMAAXPAWHLIZ',
+    'OSLGPHEYSDKWKPSK',
+    'JBMQAUMNTXEVKUTN',
+    'ZNHCDARDDOFEMCSJ',
+    'JVZMMLWLBWLXPYCY',
+]
 
 
-# HEAP = [(12, 8), (11, 9), (10, 10), (9, 11), (8, 12)]
+HEAP = [(12, 8), (11, 9), (10, 10), (9, 11), (8, 12)]
 
-# print(search('HEAP'))
-# print(recursive('HEAP', 1, pos, step = (1, -1)))
-
-# print(search('HEAP'))
-
-# SWEATY    = [(0, 5), (1, 5), (2, 5), (3, 5), (4, 5), (5, 5)]
-# SLAVE     = [(5, 9), (6, 10), (7, 11), (8, 12), (9, 13)]
-# BATHROBES = [(5, 3), (6, 4), (7, 5), (8, 6), (9, 7), (10, 8), (11, 9), (12, 10), (13, 11)]
-# PULL      = [(12, 9), (13, 10), (14, 11), (15, 12)]
-# BANDY     = [(6, 8), (7, 9), (8, 10), (9, 11), (10, 12)]
-
-# print(search('SWEATY'))
-# print(SWEATY)
-# print('---')
-# print(search('SLAVE'))
-# print(SLAVE)
-# print('---')
-# print(search('BATHROBES'))
-# print(BATHROBES)
-# print('---')
-# print(search('PULL'))
-# print(PULL)
-# print('---')
-# print(search('BANDY'))
-# print(BANDY)
-
+print(search('HEAP'))
+print(HEAP)
+'''
